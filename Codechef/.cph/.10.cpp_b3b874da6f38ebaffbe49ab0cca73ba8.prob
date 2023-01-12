@@ -1,0 +1,1 @@
+{"name":"Local: 10","url":"c:\\Users\\Akshay\\Desktop\\Just CP\\Codechef\\10.cpp","tests":[{"id":1649884725076,"input":"3\n3 7\n5 1\n1 10","output":"5 10 6\n1 2 3 4 -5\n10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Akshay\\Desktop\\Just CP\\Codechef\\10.cpp","group":"local","local":true}

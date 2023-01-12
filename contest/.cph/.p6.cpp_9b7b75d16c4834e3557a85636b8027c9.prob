@@ -1,0 +1,1 @@
+{"name":"Local: p6","url":"c:\\Users\\Akshay\\Desktop\\Just CP\\contest\\p6.cpp","tests":[{"id":1661872846252,"input":"6\n2\nRG\nRB\n4\nGRBG\nGBGB\n5\nGGGGG\nBBBBB\n7\nBBBBBBB\nRRRRRRR\n8\nRGBRRGBR\nRGGRRBGR\n1\nG\nG","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Akshay\\Desktop\\Just CP\\contest\\p6.cpp","group":"local","local":true}

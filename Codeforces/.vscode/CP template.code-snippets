@@ -1,0 +1,56 @@
+{
+    // Place your Codeforces workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+    // Placeholders with the same ids are connected.
+    // Example:
+    "boilerplate": {
+        "prefix": "cptemp",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;\n",
+            "template <typename T> istream& operator >> (istream& in, vector<T>& v) { for (auto &it:v) in >> it; return in; }",
+            "template <typename T> ostream& operator << (ostream& os, const vector<T>& v) { for (auto &it:v) os << it << \" \"; return os; }",
+            "template <typename T1, typename T2> istream& operator >> (istream& in, pair<T1,T2>& p) { cin >> p.first >> p.second; return in; }",
+            "template <typename T1, typename T2> ostream& operator << (ostream& os, const pair<T1,T2>& p) { cout << p.first << \" \" << p.second; return os; }",
+            "template <typename T1, typename T2> void minn(T1& a, T2 b) { a = min(a,b); }\n",
+            "#define int long long ",
+            "#define double long double",
+            "#define pb push_back",
+            "#define all(v) v.begin(),v.end()",
+            "#define allr(v) v.rbegin(),v.rend()",
+            "#define sz(v) (int)v.size()",
+            "#define deb(x) cout<<#x<<\"=\"<<x<<endl;\n",
+            "const int mod = 1e9 + 7;",
+            "const int mod2 = 998244353;",
+            "const double PI = 3.1415926535897932384626433832795;\n",
+            "bool check(vector<int> v, int n)",
+            "{",
+            "for(int i = 0; i < n - 1; i++)",
+            "{",
+            " if (v[i] != v[i + 1])",
+            "return true;",
+            " }",
+            "return false;",
+            "}",
+            "void solve()",
+            "\t{\n",
+            "\t\t$1",
+            "\t}",
+            "int32_t main()",
+            "{",
+            "cin.tie(0)->sync_with_stdio(0);",
+            "int tc=1;",
+            "cin>>tc;",
+            "while(tc--)",
+            "{",
+            "\tsolve();",
+            "}",
+            "return 0;",
+            "}",
+        ],
+        "description": "cp template"
+    }
+}

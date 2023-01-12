@@ -1,0 +1,1 @@
+{"name":"Local: retry2","url":"c:\\Users\\Akshay\\Desktop\\Just CP\\Codeforces\\retry2.cpp","tests":[{"id":1664789736416,"input":"4\n5 5\n1 2 3 4 5\n7 4\n-6 -5 -3 0\n3 3\n2 3 4\n3 2\n3 4\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Akshay\\Desktop\\Just CP\\Codeforces\\retry2.cpp","group":"local","local":true}
