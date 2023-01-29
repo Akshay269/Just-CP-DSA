@@ -4,28 +4,28 @@ using namespace std;
 template <typename T>
 istream &operator>>(istream &in, vector<T> &v)
 {
-  for (auto &it : v)
-    in >> it;
-  return in;
+    for (auto &it : v)
+        in >> it;
+    return in;
 }
 template <typename T>
 ostream &operator<<(ostream &os, const vector<T> &v)
 {
-  for (auto &it : v)
-    os << it << " ";
-  return os;
+    for (auto &it : v)
+        os << it << " ";
+    return os;
 }
 template <typename T1, typename T2>
 istream &operator>>(istream &in, pair<T1, T2> &p)
 {
-  cin >> p.first >> p.second;
-  return in;
+    cin >> p.first >> p.second;
+    return in;
 }
 template <typename T1, typename T2>
 ostream &operator<<(ostream &os, const pair<T1, T2> &p)
 {
-  cout << p.first << " " << p.second;
-  return os;
+    cout << p.first << " " << p.second;
+    return os;
 }
 template <typename T1, typename T2>
 void minn(T1 &a, T2 b) { a = min(a, b); }
@@ -44,31 +44,34 @@ const double PI = 3.1415926535897932384626433832795;
 
 void solve()
 {
-  // int n;cin>>n;
-  // vector<int>v(n);cin>>v;
-  // if(n%2) {cout<<"YES\n";return;}
-  // for(int i=1;i<n;i++){
-  //   v[i]=v[i]^v[i-1];
-  //   v[i-1]=0;
-  // }
-  // set<int>st(v.begin(),v.end());
-  // if(st.size()==1) cout<<"YES\n";
-  // else cout<<"NO\n";
-  int x=1, y=0;
-  cin >> x >> y;
-  int f = 2;
-  while ((f * x - 1) * y - x <= 0)
-    f *= f;
-  cout << (f * x - 1) * y - x << "\n";
+
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    cin >> v;
+    
+    int gcd = v[0];
+    int maxi=v[0];
+    for (int i = 0; i < n; i++)
+    {
+        gcd = __gcd(v[i], gcd);
+        maxi=max(v[i],maxi);
+    }
+    int ct = maxi / gcd;
+    ct -= n;
+    if (ct % 2)
+        cout << "Alice\n";
+    else
+        cout << "Bob\n";
 }
 int32_t main()
 {
-  cin.tie(0)->sync_with_stdio(0);
-  int tc = 1;
-  cin >> tc;
-  while (tc--)
-  {
-    solve();
-  }
-  return 0;
+    cin.tie(0)->sync_with_stdio(0);
+    int tc = 1;
+    cin >> tc;
+    while (tc--)
+    {
+        solve();
+    }
+    return 0;
 }
