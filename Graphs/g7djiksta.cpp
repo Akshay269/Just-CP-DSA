@@ -2,17 +2,17 @@
 using namespace std;
 int main()
 {
-    int n, m;
-    cin >> n >> m;
-    vector<pair<int, int>> adj[n + 1];
-    for (int i = 0; i < n; i++)
+    int V, S;
+    cin >> V >> S;
+    vector<pair<int, int>> adj[V + 1];
+    for (int i = 0; i < V; i++)
     {
         int u, v, w;
         cin >> u >> v >> w;
         adj[u].push_back({v, w});
         adj[v].push_back({u, w});
     }
-    vector<int> distance(n);
+    vector<int> distance(V);
     // using priority_queue
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
@@ -41,7 +41,7 @@ int main()
 
     // using set
     set<pair<int, int>> st;
-    vector<int> distance(n);
+    vector<int> distance(V);
     st.insert({0, S});
     distance[S] = 0;
 
@@ -55,11 +55,11 @@ int main()
         
         st.erase(it);
 
-        for (auto it : adj[node])
+        for (auto it2 : adj[node])
         {
 
-            int adjnode = it[0];
-            int adjdis = it[1];
+            int adjnode = it2[0];
+            int adjdis = it2[1];
             if (dis + adjdis < distance[adjnode])
             {
 
