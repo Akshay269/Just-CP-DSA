@@ -12,14 +12,19 @@ int main()
         adj[u].push_back({v, w});
         adj[v].push_back({u, w});
     }
+   //or edges vector is given
+     for(auto it:edges){
+           adj[it[0]].push_back({it[1],it[2]});
+           adj[it[1]].push_back({it[0],it[2]});
+       }
 
     // using priority_queue
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-    vector<int> parent(V);
+    vector<int> parent(V+1);
     for (int i = 0; i < V; i++) parent[i] = i;
 
         
-    vector<int> distance(V, 1e9);
+    vector<int> distance(V+1, 1e9);
 
     distance[S] = 0;
     pq.push({0, S});
@@ -51,5 +56,4 @@ int main()
     }
     ans.push_back(1);
     reverse(ans.begin(),ans.end());
-    for(int i=0;i<ans.size();i++) cout<<ans[i]<<" ";
 }
