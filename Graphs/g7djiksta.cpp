@@ -45,8 +45,6 @@ int main()
     st.insert({0, S});
     distance[S] = 0;
 
-
-
     while (!st.empty())
     {
         auto it = *(st.begin());//bcoz like pq.top() there is no function in sets
@@ -63,7 +61,7 @@ int main()
             if (dis + adjdis < distance[adjnode])
             {
 
-                if (distance[adjnode] != 1e9)
+                if (distance[adjnode] != 1e9)//koi pehle meet kr gya h
                     st.erase({distance[adjnode], adjnode});
             }
             distance[adjnode] = dis + adjdis;
